@@ -1,7 +1,7 @@
 # SmoothTabLayout
 
 ## 0.效果图
-<center><img src="http://oueeb3f1q.bkt.clouddn.com/SmoothTabLayout1.png"/></center>
+<center><img src="http://oueeb3f1q.bkt.clouddn.com/SmoothTabLayout1.gif"/></center>
 
 ## 1.项目的build.gradle中
 ```grovvy
