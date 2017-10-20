@@ -1,6 +1,6 @@
 # SmoothTabLayout
 
-#### 如有帮助，请加星支持！
+#### 如有帮助，请加星支持！如需帮助，请联系namcooper@163.com
 
 ## 0.效果图
 <center><img src="http://oueeb3f1q.bkt.clouddn.com/SmoothTabLayout1.gif"/></center>
