@@ -2,10 +2,12 @@
 
 ## 0.效果图
 <center><img src="http://oueeb3f1q.bkt.clouddn.com/SmoothTabLayout2.png"/></center>
+
 ## 1.项目的build.gradle中
 ```grovvy
 compile 'com.namhofstadter.smoothtablayout:smoothTabLayout-master:1.0.0'
 ```
+
 ## 2.布局文件中
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -29,6 +31,7 @@ compile 'com.namhofstadter.smoothtablayout:smoothTabLayout-master:1.0.0'
         />
 </LinearLayout>
 ```
+
 ## 3.activity中使用
 ```java
 @Override
@@ -72,7 +75,8 @@ compile 'com.namhofstadter.smoothtablayout:smoothTabLayout-master:1.0.0'
         tabs.setViewPager(vp);
     }
 ```
-## 3.其他方法
+
+## 4.其他方法
 
 + setTextSize(int textSize):设置tab的字体大小
 + setPaddingTopAndBot(int paddingTopAndBot)：设置背景的上下padding
