@@ -7,7 +7,7 @@
 
 ## 1.项目的build.gradle中
 ```grovvy
-compile 'com.namhofstadter.smoothtablayout:smoothTabLayout-master:1.0.0'
+compile 'com.namhofstadter.smoothtablayout:smoothTabLayout-master:1.0.1'
 ```
 
 ## 2.布局文件中
@@ -78,9 +78,10 @@ compile 'com.namhofstadter.smoothtablayout:smoothTabLayout-master:1.0.0'
     }
 ```
 
-## 4.其他方法
+## 4.其他方法（以下方法需要在setViewPager方法之前调用，否则无效！）
 
 + setTextSize(int textSize):设置tab的字体大小
 + setPaddingTopAndBot(int paddingTopAndBot)：设置背景的上下padding
 + setPaddingLeftAndRight(int paddingLeftAndRight)：设置背景的左右padding
 + setBgShape(int resId)：设置背景的资源id，必须是shape的xml文件的id
++ setSelectorColor(int normalColor, int selectColor)：设置选中文字和未选中恩建的颜色
