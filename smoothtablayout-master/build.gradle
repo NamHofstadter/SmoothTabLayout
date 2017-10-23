@@ -35,9 +35,10 @@ android {
         userOrg = 'namhofstadter'      //bintray注册的用户名
         groupId = 'com.namhofstadter.smoothtablayout'         //compile引用时的第1部分groupId
         artifactId = 'smoothTabLayout-master'     //compile引用时的第2部分项目名
-        publishVersion = '1.0.0'    //compile引用时的第3部分版本号
+        publishVersion = '1.0.1'    //compile引用时的第3部分版本号
         desc = 'a nice tablayout with Gradient text'
         website = 'https://github.com/NamHofstadter/SmoothTabLayout'
+//        gradlew clean build bintrayUpload -PbintrayUser=namhofstadter -PbintrayKey=aaaaaaaaa -PdryRun=false
     }
 }
 

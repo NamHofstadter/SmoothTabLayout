@@ -1,1 +1,1 @@
-include ':app', ':smoothtablayout-master'
+include ':example', ':smoothtablayout-master'
