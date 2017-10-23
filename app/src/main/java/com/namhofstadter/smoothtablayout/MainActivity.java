@@ -1,5 +1,6 @@
 package com.namhofstadter.smoothtablayout;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         tabs = (SmoothTabLayout) findViewById(R.id.tab);
+        tabs.setSelectorColor(Color.BLUE, Color.YELLOW);
         vp = (ViewPager) findViewById(R.id.vp);
 
         vp.setAdapter(new PagerAdapter() {

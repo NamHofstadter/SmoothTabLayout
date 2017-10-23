@@ -35,6 +35,8 @@ public class SmoothTabLayout extends RelativeLayout {
     private int paddingLeftAndRight = 0;
     private int textSize = 0;
     private int bgShape = R.drawable.shape_tab_item_bg;
+    private int normalColor = Color.BLACK;
+    private int selectColor = Color.WHITE;
 
     public SmoothTabLayout(Context context) {
         this(context, null);
@@ -68,6 +70,11 @@ public class SmoothTabLayout extends RelativeLayout {
         this.bgShape = resId;
     }
 
+    public void setSelectorColor(int normalColor, int selectColor) {
+        this.normalColor = normalColor;
+        this.selectColor = selectColor;
+    }
+
     public void setViewPager(final ViewPager viewPager) {
         bot = new LinearLayout(mContext);
         LayoutParams botParams = new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
@@ -81,6 +88,7 @@ public class SmoothTabLayout extends RelativeLayout {
             String title = adapter.getPageTitle(i).toString();
             TextView view = new TextView(mContext);
             view.setText(title);
+            view.setTextColor(normalColor);
             view.setTextSize(textSize);
             view.setGravity(Gravity.CENTER);
             LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT);
@@ -120,7 +128,7 @@ public class SmoothTabLayout extends RelativeLayout {
             TextView view = new TextView(mContext);
             view.setText(title);
             view.setTextSize(textSize);
-            view.setTextColor(Color.WHITE);
+            view.setTextColor(selectColor);
             view.setGravity(Gravity.CENTER);
             //每一个tab的宽度都与滑块的宽度相同
             LinearLayout.LayoutParams topTabParams = new LinearLayout.LayoutParams(barWidth, ViewGroup.LayoutParams.MATCH_PARENT);
