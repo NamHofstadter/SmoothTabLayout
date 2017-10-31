@@ -84,7 +84,7 @@ public class SmoothTabLayout extends RelativeLayout {
         final int tabCount = adapter.getCount();
         bot.setWeightSum(tabCount);
         final int screenWidth = getScreenWidth();
-        int barWidth = (int) (screenWidth * 1f / tabCount);
+        final int barWidth = (int) (screenWidth * 1f / tabCount);
         //添加底部tab
         for (int i = 0; i < tabCount; i++) {
             String title = adapter.getPageTitle(i).toString();
@@ -137,23 +137,29 @@ public class SmoothTabLayout extends RelativeLayout {
         }
         top.addView(topInner);
         bar.addView(top);
-        bar.setTranslationX(paddingLeftAndRight * 1f / 2);
+        bar.setTranslationX((int) (paddingLeftAndRight * 1f / 2));
         //控制滑块的滑动
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-                float dia = paddingLeftAndRight * 1f / 2 + screenWidth * 1f * position / tabCount + positionOffset * screenWidth * 1f / tabCount;
-                if (positionOffset % 1 != 0) {
-                    //滑块移动
-                    bar.setTranslationX(dia);
-                }
+                int dia = (int) (paddingLeftAndRight * 1f / 2 + barWidth * position + positionOffset * barWidth);
+//                if (positionOffset % 1 != 0) {
+//                    //滑块移动
+//                    bar.setTranslationX(dia);
+//                    //滑块内容反向移动
+//                    topInner.setTranslationX(-dia);
+//                }
+                //滑块移动
+                bar.setTranslationX(dia);
                 //滑块内容反向移动
                 topInner.setTranslationX(-dia);
+
             }
 
             @Override
             public void onPageSelected(int position) {
-                bar.setTranslationX(screenWidth * 1f * position / tabCount);
+//                bar.setTranslationX((int) (paddingLeftAndRight * 1f / 2) + barWidth * position);
+//                topInner.setTranslationX((int) (paddingLeftAndRight * 1f / 2) - barWidth * position);
             }
 
             @Override
