@@ -83,6 +83,8 @@ public class SmoothTabLayout extends RelativeLayout {
         PagerAdapter adapter = viewPager.getAdapter();
         final int tabCount = adapter.getCount();
         bot.setWeightSum(tabCount);
+        final int screenWidth = getScreenWidth();
+        int barWidth = (int) (screenWidth * 1f / tabCount);
         //添加底部tab
         for (int i = 0; i < tabCount; i++) {
             String title = adapter.getPageTitle(i).toString();
@@ -91,8 +93,8 @@ public class SmoothTabLayout extends RelativeLayout {
             view.setTextColor(normalColor);
             view.setTextSize(textSize);
             view.setGravity(Gravity.CENTER);
-            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT);
-            params.weight = 1;
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(barWidth, ViewGroup.LayoutParams.MATCH_PARENT);
+//            params.weight = 1;
             view.setLayoutParams(params);
             bot.addView(view);
             final int clickPos = i;
@@ -104,8 +106,6 @@ public class SmoothTabLayout extends RelativeLayout {
             });
         }
         //添加滑块
-        final int screenWidth = getScreenWidth();
-        int barWidth = (int) (screenWidth * 1f / tabCount);
         bar = new RelativeLayout(mContext);
         bar.setBackgroundResource(bgShape);
         LayoutParams barParams = new LayoutParams(barWidth - paddingLeftAndRight, ViewGroup.LayoutParams.MATCH_PARENT);
