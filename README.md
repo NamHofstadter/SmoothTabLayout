@@ -1,4 +1,4 @@
-# SmoothTabLayout
+4# SmoothTabLayout
 
 #### 如有帮助，请加星支持！如需帮助，请联系namcooper@163.com
 
@@ -7,7 +7,7 @@
 
 ## 1.项目的build.gradle中
 ```grovvy
-compile 'com.namhofstadter.smoothtablayout:smoothTabLayout-master:1.0.1'
+compile 'com.namhofstadter.smoothtablayout:smoothTabLayout-master:1.0.4'
 ```
 
 ## 2.布局文件中
